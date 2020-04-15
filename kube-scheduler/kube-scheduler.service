@@ -1,11 +1,13 @@
 [Unit]
 Description=Kubernetes Scheduler
-Documentation=https://github.com/GoogleCloudPlatform/kubernetes After=kube-apiserver.service
+Documentation=https://github.com/GoogleCloudPlatform/kubernetes 
+After=kube-apiserver.service
 Requires=kube-apiserver.service
 
 [Service]
 EnvironmentFile=/etc/kubernetes/scheduler
-Execs七art=/usr/bin/kube-scheduler $KUBE_SCHEDULER_ARGS Restart=on-failure
+Execstart=/usr/bin/kube-scheduler $KUBE_SCHEDULER_ARGS 
+Restart=on-failure
 LimitNOFILE=65536
 
 [Install]

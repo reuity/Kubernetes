@@ -1,6 +1,7 @@
 [Unit]
 Description=Kubernetes API Server
-Documentation=https://github.com/GoogleCloudPlatform/kubernetes After=etcd.service
+Documentation=https://github.com/GoogleCloudPlatform/kubernetes 
+After=etcd.service
 Wants=etcd.service
 
 [Service]
