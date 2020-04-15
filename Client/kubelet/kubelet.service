@@ -7,7 +7,7 @@ Requires=docker.service
 [Service]
 WorkingDirectory=/var/lib/kubelet
 EnvironmentFile=/etc/kubernetes/kubelet
-ExecStart=/usr/bin/kubelet $KUBELET ARGS
+ExecStart=/usr/bin/kubelet $KUBELET_ARGS
 Restart=on-failure
 
 [Install]
