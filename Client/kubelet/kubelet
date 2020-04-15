@@ -1,0 +1,1 @@
+KUBELET_ARGS="--kubeconfig=/etc/kubernetes/kubeconfig --hostname-override=10.1.11.12 --logtostderr=false --log-dir=/data/logs/kubernetes --v=0"
