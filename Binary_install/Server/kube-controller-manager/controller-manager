@@ -1,1 +1,1 @@
-KUBE_CONTROLLER_MANAGER_ARGS="--kubeconfig=/etc/kubernetes/kubeconfig --logtostderr=false --log-dir=/data/logs/kubernetes --v=0"
+KUBE_CONTROLLER_MANAGER_ARGS="--kubeconfig=/etc/kubernetes/kubeconfig --service-account-key-file=/data/k8sCA/server.key --root-ca-file=/data/k8sCA/ca.crt --logtostderr=false --log-dir=/data/logs/kubernetes --v=0"
