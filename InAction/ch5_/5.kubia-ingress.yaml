@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kubia-ingress
+  namespace: default
+spec:
+  #ingressClassName: nginx
+#  backend: 
+#    serviceName: kubia
+    #serviceName: kubia-svc-nodeport 
+#    servicePort: 8080
+  rules: 
+    - host: kubia.feifei
+      http: 
+        paths:
+          - path: /
+            backend: 
+            #resource: ReplicaSet
+              serviceName: kubia
+              servicePort: 8080

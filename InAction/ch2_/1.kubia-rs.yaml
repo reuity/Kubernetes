@@ -8,13 +8,18 @@ spec:
     matchExpressions:
       - key: app
         operator: In
-        values:
+        values: 
           - kubia
   template:
     metadata:
-      labels:
+      labels: 
         app: kubia
     spec:
       containers:
-        - name: kubia
-          image: kubia:v0.1
+        - name: kubia-app
+          image: reuity/kubia
+          imagePullPolicy: IfNotPresent
+          readinessProbe: 
+            - httpGet:
+                - path: /
+                  port: 8080
